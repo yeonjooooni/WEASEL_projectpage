@@ -44,7 +44,7 @@
   <meta name="citation_author" content="Kim, Gunhee">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="International Conference on Machine Learning (ICML)">
-  <meta name="citation_pdf_url" content="static/pdfs/paper.pdf">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2605.20291">
 
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
@@ -162,7 +162,7 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="static/pdfs/paper.pdf" target="_blank"
+                  <a href="https://arxiv.org/abs/2605.20291" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
                     <span>Paper</span>
@@ -174,14 +174,6 @@
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
-                  </a>
-                </span>
-
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/" target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="ai ai-arxiv"></i></span>
-                    <span>arXiv</span>
                   </a>
                 </span>
               </div>
@@ -201,7 +193,7 @@
         <div class="teaser-card">
           <div class="teaser-card-header">
             <span class="teaser-card-tag teaser-card-tag-red">Challenge</span>
-            <h3 class="teaser-card-title">Agents struggle to generalize <em>out of domain</em> — i.e., to unseen websites at evaluation</h3>
+            <h3 class="teaser-card-title">Agents struggle to generalize <em>out of domain</em>, i.e., to unseen websites at evaluation</h3>
           </div>
           <div class="ood-grid">
             <figure class="ood-figure">
@@ -326,7 +318,7 @@
           <div class="teaser-card-header">
             <span class="teaser-card-tag teaser-card-tag-blue">Result</span>
             <h3 class="teaser-card-title">
-              Trained on out-of-domain data, <span style="color:#2563eb; font-variant: small-caps;">Weasel</span> matches — and exceeds — the in-domain ceiling
+              Trained on out-of-domain data, <span style="color:#2563eb; font-variant: small-caps;">Weasel</span> matches, and even exceeds, the in-domain ceiling
             </h3>
           </div>
           <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg"
@@ -422,12 +414,12 @@
             </g>
           </svg>
           <p class="teaser-card-caption">
-            Qwen3-8B on WebArena-Lite. The in-domain ceiling is <strong>20.0</strong> (training on WebArena). Out-of-domain pretrained baseline reaches only <strong>16.4</strong>, and SFT on AgentTrek <strong>17.7</strong> — <span style="color:#2563eb; font-variant: small-caps;">Weasel</span> lifts AgentTrek to <strong>21.2</strong>, overtaking the in-domain ceiling without seeing any WebArena task.
+            Qwen3-8B on WebArena-Lite. The in-domain ceiling is <strong>20.0</strong> (training on WebArena). Out-of-domain pretrained baseline reaches only <strong>16.4</strong>, and SFT on AgentTrek <strong>17.7</strong>. With <span style="color:#2563eb; font-variant: small-caps;">Weasel</span>, AgentTrek lifts to <strong>21.2</strong>, overtaking the in-domain ceiling without seeing any WebArena task.
           </p>
         </div>
 
         <h2 class="subtitle has-text-centered" style="margin-top:1.5rem;">
-          Conventional web agents drop sharply under <strong>out-of-domain shifts</strong> to unseen websites and interaction patterns. <span style="color:#2563eb; font-variant: small-caps;">Weasel</span> scores offline demonstration steps for <em>goal relevance</em> and <em>diversity</em>, then runs <em>greedy subset selection</em> under a fixed budget — yielding a <strong>+4.8</strong> SR gain on zero-shot transfer (AgentTrek → WebArena-Lite, Qwen3-8B).
+          Conventional web agents drop sharply under <strong>out-of-domain shifts</strong> to unseen websites and interaction patterns. <span style="color:#2563eb; font-variant: small-caps;">Weasel</span> scores offline demonstration steps for <em>goal relevance</em> and <em>diversity</em>, then runs <em>greedy subset selection</em> under a fixed budget, yielding a <strong>+4.8</strong> SR gain on zero-shot transfer (AgentTrek → WebArena-Lite, Qwen3-8B).
         </h2>
       </div>
     </div>
@@ -712,7 +704,7 @@
         <div class="column is-half">
           <div class="content has-text-justified">
             <p>
-              A single linearized AXTree state in AgentTrek can reach <strong>180K tokens</strong> — costly to train on, and most of those tokens are irrelevant to the expert's next action.
+              A single linearized AXTree state in AgentTrek can reach <strong>180K tokens</strong>: costly to train on, and most of those tokens are irrelevant to the expert's next action.
             </p>
             <p>
               For node-grounded actions, we retain a contiguous window of length $2w+1$ centered at the gold target node $v_{t,k_t^\star}$, producing a compact pruned state $\tilde{s}_t$ that preserves the local context most useful for predicting the expert action. This is applied as a preprocessing step before <span style="color:#2563eb; font-variant: small-caps;">Weasel</span>'s subset selection.
@@ -809,7 +801,7 @@
             <!-- Mini ablation: SFT 15.8 / SFT+RS 17.6 / WEASEL 21.2 (Qwen3-8B WebArena-Lite) -->
             <g font-family="Inter, sans-serif">
               <text x="270" y="310" text-anchor="middle" font-size="12" font-weight="700" fill="#333">
-                WebArena-Lite SR — Qwen3-8B (10K subset)
+                WebArena-Lite SR, Qwen3-8B (10K subset)
               </text>
               <!-- Bars: max width 280 maps to value 22 (so value 21.2 → 270, 17.6 → 224, 15.8 → 201) -->
               <!-- SFT random : 15.8 -->
@@ -836,7 +828,7 @@
               Reasoning-native models (e.g.&nbsp;Qwen3) emit intermediate reasoning traces before final outputs. When the training corpus has reasoning traces produced by a <em>different</em> model, naive SFT introduces a <strong>style mismatch</strong> that can destabilize training and even drag performance <em>below</em> the base model.
             </p>
             <p>
-              To fix this, we replace the expert reasoning trace with a <em>self-generated</em> rationale produced by the same target model — given the goal, interaction history, pruned state, and the gold action — while keeping the original action supervision intact.
+              To fix this, we replace the expert reasoning trace with a <em>self-generated</em> rationale produced by the same target model, conditioned on the goal, interaction history, pruned state, and the gold action, while keeping the original action supervision intact.
             </p>
             <p>
               For Qwen3-8B on WebArena-Lite, self-reasoning is critical: SFT + RS lifts 15.8&nbsp;→&nbsp;17.6, and combining with <span style="color:#2563eb; font-variant: small-caps;">Weasel</span>'s selection reaches <strong>21.2</strong>, the highest result among all variants.
@@ -875,21 +867,21 @@
           </thead>
           <tbody>
             <tr><td colspan="7"><em>Qwen2.5-7B-Instruct</em></td></tr>
-            <tr><td>Base (no train)</td><td class="has-text-centered">5.5</td><td class="has-text-centered">5.2</td><td class="has-text-centered">41.8</td><td class="has-text-centered">4.8 / 0.0</td><td class="has-text-centered">—</td><td class="has-text-centered">—</td></tr>
+            <tr><td>Base (no train)</td><td class="has-text-centered">5.5</td><td class="has-text-centered">5.2</td><td class="has-text-centered">41.8</td><td class="has-text-centered">4.8 / 0.0</td><td class="has-text-centered">n/a</td><td class="has-text-centered">n/a</td></tr>
             <tr><td>+ Full SFT (52K)</td><td class="has-text-centered">10.9</td><td class="has-text-centered">8.7</td><td class="has-text-centered">44.6</td><td class="has-text-centered">12.1 / 0.4</td><td class="has-text-centered">136.0 hr</td><td class="has-text-centered">1.0×</td></tr>
             <tr><td>+ Pruning + Random (10K)</td><td class="has-text-centered">9.1</td><td class="has-text-centered">8.1</td><td class="has-text-centered">46.7</td><td class="has-text-centered">9.8 / 3.0</td><td class="has-text-centered">12.0 hr</td><td class="has-text-centered">11.3×</td></tr>
             <tr><td>+ Pruning + LLM-Judge (10K)</td><td class="has-text-centered">8.5</td><td class="has-text-centered">7.8</td><td class="has-text-centered">45.4</td><td class="has-text-centered">8.5 / 3.0</td><td class="has-text-centered">12.0 hr</td><td class="has-text-centered">11.3×</td></tr>
             <tr style="background:#eef4ff;"><td><strong>+ Weasel (10K)</strong></td><td class="has-text-centered"><strong>14.5</strong></td><td class="has-text-centered"><strong>9.5</strong></td><td class="has-text-centered"><strong>48.0</strong></td><td class="has-text-centered"><strong>12.4 / 4.7</strong></td><td class="has-text-centered">12.0 hr</td><td class="has-text-centered"><strong>11.3×</strong></td></tr>
 
             <tr><td colspan="7"><em>Gemma3-4B-IT</em></td></tr>
-            <tr><td>Base (no train)</td><td class="has-text-centered">6.7</td><td class="has-text-centered">2.7</td><td class="has-text-centered">27.4</td><td class="has-text-centered">3.6 / 0.0</td><td class="has-text-centered">—</td><td class="has-text-centered">—</td></tr>
+            <tr><td>Base (no train)</td><td class="has-text-centered">6.7</td><td class="has-text-centered">2.7</td><td class="has-text-centered">27.4</td><td class="has-text-centered">3.6 / 0.0</td><td class="has-text-centered">n/a</td><td class="has-text-centered">n/a</td></tr>
             <tr><td>+ Full SFT (52K)</td><td class="has-text-centered">9.1</td><td class="has-text-centered">4.3</td><td class="has-text-centered">28.6</td><td class="has-text-centered">3.3 / 0.0</td><td class="has-text-centered">80.0 hr</td><td class="has-text-centered">1.0×</td></tr>
             <tr><td>+ Pruning + Random (10K)</td><td class="has-text-centered">8.5</td><td class="has-text-centered">4.7</td><td class="has-text-centered">29.4</td><td class="has-text-centered">2.4 / 2.1</td><td class="has-text-centered">6.4 hr</td><td class="has-text-centered">12.5×</td></tr>
             <tr><td>+ Pruning + LLM-Judge (10K)</td><td class="has-text-centered">6.7</td><td class="has-text-centered">5.2</td><td class="has-text-centered">29.3</td><td class="has-text-centered">4.5 / 2.1</td><td class="has-text-centered">6.4 hr</td><td class="has-text-centered">12.5×</td></tr>
             <tr style="background:#eef4ff;"><td><strong>+ Weasel (10K)</strong></td><td class="has-text-centered"><strong>11.5</strong></td><td class="has-text-centered"><strong>5.5</strong></td><td class="has-text-centered"><strong>30.6</strong></td><td class="has-text-centered"><strong>4.5 / 3.0</strong></td><td class="has-text-centered">6.4 hr</td><td class="has-text-centered"><strong>12.5×</strong></td></tr>
 
             <tr><td colspan="7"><em>Qwen3-8B</em> (reasoning-native)</td></tr>
-            <tr><td>Base (no train)</td><td class="has-text-centered">16.4</td><td class="has-text-centered">18.0</td><td class="has-text-centered">61.1</td><td class="has-text-centered">35.2 / 1.7</td><td class="has-text-centered">—</td><td class="has-text-centered">—</td></tr>
+            <tr><td>Base (no train)</td><td class="has-text-centered">16.4</td><td class="has-text-centered">18.0</td><td class="has-text-centered">61.1</td><td class="has-text-centered">35.2 / 1.7</td><td class="has-text-centered">n/a</td><td class="has-text-centered">n/a</td></tr>
             <tr><td>+ Full SFT (52K)</td><td class="has-text-centered">17.7</td><td class="has-text-centered">18.2</td><td class="has-text-centered">59.4</td><td class="has-text-centered">33.3 / 2.1</td><td class="has-text-centered">88.5 hr</td><td class="has-text-centered">1.0×</td></tr>
             <tr><td>+ Pruning + Random (10K)</td><td class="has-text-centered">16.5</td><td class="has-text-centered">17.5</td><td class="has-text-centered">61.4</td><td class="has-text-centered">33.9 / 3.4</td><td class="has-text-centered">7.0 hr</td><td class="has-text-centered">12.6×</td></tr>
             <tr><td>+ Pruning + LLM-Judge (10K)</td><td class="has-text-centered">19.4</td><td class="has-text-centered">16.6</td><td class="has-text-centered">61.9</td><td class="has-text-centered">35.2 / 3.8</td><td class="has-text-centered">7.0 hr</td><td class="has-text-centered">12.6×</td></tr>
@@ -916,7 +908,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Base (no train)</td><td class="has-text-centered">5.5</td><td class="has-text-centered">5.2</td><td class="has-text-centered">41.8</td><td class="has-text-centered">4.8</td><td class="has-text-centered">0.0</td><td class="has-text-centered">—</td></tr>
+            <tr><td>Base (no train)</td><td class="has-text-centered">5.5</td><td class="has-text-centered">5.2</td><td class="has-text-centered">41.8</td><td class="has-text-centered">4.8</td><td class="has-text-centered">0.0</td><td class="has-text-centered">n/a</td></tr>
             <tr><td>+ Full SFT (52K)</td><td class="has-text-centered">10.9</td><td class="has-text-centered">6.9</td><td class="has-text-centered">38.9</td><td class="has-text-centered">5.2</td><td class="has-text-centered">6.4</td><td class="has-text-centered">1.0×</td></tr>
             <tr><td>+ Pruning + Random (10K)</td><td class="has-text-centered">10.3</td><td class="has-text-centered">7.4</td><td class="has-text-centered">32.3</td><td class="has-text-centered">7.0</td><td class="has-text-centered">6.0</td><td class="has-text-centered">9.7×</td></tr>
             <tr style="background:#eef4ff;"><td><strong>+ Weasel (10K)</strong></td><td class="has-text-centered"><strong>12.1</strong></td><td class="has-text-centered"><strong>8.3</strong></td><td class="has-text-centered"><strong>41.8</strong></td><td class="has-text-centered"><strong>7.6</strong></td><td class="has-text-centered"><strong>6.8</strong></td><td class="has-text-centered"><strong>9.7×</strong></td></tr>
